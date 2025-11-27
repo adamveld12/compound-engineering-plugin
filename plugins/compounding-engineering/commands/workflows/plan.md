@@ -8,11 +8,17 @@ argument-hint: "[feature description, bug report, or improvement idea]"
 
 ## Introduction
 
+**Note: The current year is 2025.** Use this when dating plans and searching for recent documentation.
+
 Transform feature descriptions, bug reports, or improvement ideas into well-structured markdown files issues that follow project conventions and best practices. This command provides flexible detail levels to match your needs.
 
 ## Feature Description
 
 <feature_description> #$ARGUMENTS </feature_description>
+
+**If the feature description above is empty, ask the user:** "What would you like to plan? Please describe the feature, bug fix, or improvement you have in mind."
+
+Do not proceed until you have a clear feature description from the user.
 
 ## Main Tasks
 
@@ -361,19 +367,27 @@ end
 
 ## Output Format
 
-write to plans/<issue_title>.md
+Write the plan to `plans/<issue_title>.md`
 
-Now call the /plan_review command with the plan file as the argument. Make sure to include the plan file in the command.
+## Post-Generation Options
 
-## Thinking Approaches
+After writing the plan file, use the **AskUserQuestion tool** to present these options:
 
-- **Analytical:** Break down complex features into manageable components
-- **User-Centric:** Consider end-user impact and experience
-- **Technical:** Evaluate implementation complexity and architecture fit
-- **Strategic:** Align with project goals and roadmap
+**Question:** "Plan ready at `plans/<issue_title>.md`. What would you like to do next?"
 
-After you get the review back, ask the user questions about the current state of the plan and what the reviewers came back with. Make sure to underatand if this plan is too big or thinks are missing. Are there any other considerations that should be included? Keep askign questions until the user is happy with the plan. THEN update the plan file with the user's feedback.
+**Options:**
+1. **Start `/work`** - Begin implementing this plan
+2. **Run `/plan_review`** - Get feedback from reviewers (DHH, Kieran, Simplicity)
+3. **Simplify** - Reduce detail level
+4. **Rework** - Change approach or request specific changes
 
-Optional you can ask to create a Github issue from the plan file.
+Based on selection:
+- **`/work`** → Call the /work command with the plan file path
+- **`/plan_review`** → Call the /plan_review command with the plan file path
+- **Simplify** → Ask "What should I simplify?" then regenerate simpler version
+- **Rework** → Ask "What would you like changed?" then regenerate with changes
+- **Other** (automatically provided) → Accept free text, act on it
+
+Loop back to options after Simplify/Rework until user selects `/work` or `/plan_review`.
 
 NEVER CODE! Just research and write the plan.
