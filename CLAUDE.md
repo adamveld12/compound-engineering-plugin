@@ -1,4 +1,4 @@
-# Every Marketplace - Claude Code Plugin Marketplace
+# Bobsled Marketplace - Claude Code Plugin Marketplace
 
 This repository is a Claude Code plugin marketplace that distributes the `compound-engineering` plugin to developers building with AI-powered tools.
 

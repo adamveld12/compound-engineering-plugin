@@ -117,10 +117,10 @@ This command takes a work document (plan, specification, or todo file) and execu
 
    ```bash
    # Run full test suite
-   bin/rails test
+   pnpm test
 
    # Run linting (per CLAUDE.md)
-   # Use linting-agent before pushing to origin
+   pnpm lint
    ```
 
 2. **Consider Reviewer Agents** (Optional)
@@ -128,16 +128,16 @@ This command takes a work document (plan, specification, or todo file) and execu
    Use for complex, risky, or large changes:
 
    - **code-simplicity-reviewer**: Check for unnecessary complexity
-   - **kieran-rails-reviewer**: Verify Rails conventions (Rails projects)
+   - **typescript-reviewer**: Verify TypeScript conventions
+   - **python-reviewer**: Verify Python conventions
    - **performance-oracle**: Check for performance issues
    - **security-sentinel**: Scan for security vulnerabilities
-   - **cora-test-reviewer**: Review test quality (CORA projects)
 
    Run reviewers in parallel with Task tool:
 
    ```
    Task(code-simplicity-reviewer): "Review changes for simplicity"
-   Task(kieran-rails-reviewer): "Check Rails conventions"
+   Task(typescript-reviewer): "Check TypeScript conventions"
    ```
 
    Present findings to user and address critical issues.
@@ -277,7 +277,7 @@ Before creating PR, verify:
 
 - [ ] All clarifying questions asked and answered
 - [ ] All TodoWrite tasks marked completed
-- [ ] Tests pass (run `bin/rails test`)
+- [ ] Tests pass (run `pnpm test`)
 - [ ] Linting passes (use linting-agent)
 - [ ] Code follows existing patterns
 - [ ] Figma designs match implementation (if applicable)

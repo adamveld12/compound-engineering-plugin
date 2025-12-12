@@ -96,7 +96,7 @@ Structure your findings as:
 **Search Strategies:**
 
 When using search tools:
-- For Ruby code patterns: `ast-grep --lang ruby -p 'pattern'`
+- For TypeScript code patterns: `ast-grep --lang typescript -p 'pattern'`
 - For general text search: `rg -i 'search term' --type md`
 - For file discovery: `find . -name 'pattern' -type f`
 - Check multiple variations of common file names

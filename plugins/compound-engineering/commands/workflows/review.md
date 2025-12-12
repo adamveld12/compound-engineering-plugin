@@ -54,19 +54,16 @@ Ensure that the code is ready for analysis (either in worktree or on current bra
 
 Run ALL or most of these agents at the same time:
 
-1. Task kieran-rails-reviewer(PR content)
-2. Task dhh-rails-reviewer(PR title)
-3. If turbo is used: Task rails-turbo-expert(PR content)
-4. Task git-history-analyzer(PR content)
-5. Task dependency-detective(PR content)
-6. Task pattern-recognition-specialist(PR content)
-7. Task architecture-strategist(PR content)
-8. Task code-philosopher(PR content)
-9. Task security-sentinel(PR content)
-10. Task performance-oracle(PR content)
-11. Task devops-harmony-analyst(PR content)
-12. Task data-integrity-guardian(PR content)
-13. Task agent-native-reviewer(PR content) - Verify new features are agent-accessible
+1. Task typescript-reviewer(PR content)
+2. Task python-reviewer(PR content)
+3. Task git-history-analyzer(PR content)
+4. Task pattern-recognition-specialist(PR content)
+5. Task architecture-strategist(PR content)
+6. Task security-sentinel(PR content)
+7. Task performance-oracle(PR content)
+8. Task data-integrity-guardian(PR content)
+9. Task agent-native-reviewer(PR content) - Verify new features are agent-accessible
+10. Task code-simplicity-reviewer(PR content)
 
 </parallel_tasks>
 
@@ -307,7 +304,7 @@ Examples:
 - `p2` - Important (should fix, architectural/performance)
 - `p3` - Nice-to-have (enhancements, cleanup)
 
-**Tagging:** Always add `code-review` tag, plus: `security`, `performance`, `architecture`, `rails`, `quality`, etc.
+**Tagging:** Always add `code-review` tag, plus: `security`, `performance`, `architecture`, `typescript`, `quality`, etc.
 
 #### Step 3: Summary Report
 
@@ -343,11 +340,13 @@ After creating all todo files, present comprehensive summary:
 
 ### Review Agents Used:
 
-- kieran-rails-reviewer
+- typescript-reviewer
+- python-reviewer
 - security-sentinel
 - performance-oracle
 - architecture-strategist
 - agent-native-reviewer
+- code-simplicity-reviewer
 - [other agents]
 
 ### Next Steps:

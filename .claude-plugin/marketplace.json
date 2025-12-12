@@ -1,24 +1,24 @@
 {
-  "name": "every-marketplace",
+  "name": "bobsled-marketplace",
   "owner": {
-    "name": "Every Inc.",
-    "url": "https://github.com/EveryInc"
+    "name": "Bobsled Inc.",
+    "url": "https://github.com/bobsled-inc"
   },
   "metadata": {
-    "description": "Official Every plugin marketplace for Claude Code extensions",
+    "description": "Official Bobsled plugin marketplace for Claude Code extensions",
     "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "compound-engineering",
-      "description": "AI-powered development tools that get smarter with every use. Make each unit of engineering work easier than the last. Includes 25 specialized agents, 19 commands, and 12 skills.",
-      "version": "2.10.0",
+      "description": "AI-powered development tools that get smarter with every use. Make each unit of engineering work easier than the last. Includes specialized agents, commands, and skills.",
+      "version": "0.1.0",
       "author": {
-        "name": "Kieran Klaassen",
-        "url": "https://github.com/kieranklaassen",
-        "email": "kieran@every.to"
+        "name": "Adam Veldhousen",
+        "url": "https://github.com/bobsled-inc",
+        "email": "sre@bobsled.co"
       },
-      "homepage": "https://github.com/EveryInc/compound-engineering-plugin",
+      "homepage": "https://github.com/bobsled-inc/compound-engineering-plugin",
       "tags": ["ai-powered", "compound-engineering", "workflow-automation", "code-review", "quality", "knowledge-management", "image-generation"],
       "source": "./plugins/compound-engineering"
     }

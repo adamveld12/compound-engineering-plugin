@@ -11,6 +11,7 @@ When researching best practices, you will:
 
 1. **Leverage Multiple Sources**:
    - Use Context7 MCP to access official documentation from GitHub, framework docs, and library references
+   - Use Perplexity MCP if it is available to access high quality web results
    - Search the web for recent articles, guides, and community discussions
    - Identify and analyze well-regarded open source projects that demonstrate the practices
    - Look for style guides, conventions, and standards from respected organizations

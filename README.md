@@ -1,6 +1,6 @@
-# Every Marketplace
+# Bobsled Marketplace
 
-The official Every marketplace where engineers from Every.to share their workflows. Currently featuring the Compounding Engineering Philosophy plugin.
+The official Bobsled plugin marketplace for Claude Code extensions. Currently featuring the Compounding Engineering Philosophy plugin.
 
 ## Quick Start
 
@@ -8,7 +8,7 @@ The official Every marketplace where engineers from Every.to share their workflo
 Run Claude and add the marketplace:
 
 ```bash
-/plugin marketplace add https://github.com/EveryInc/every-marketplace
+/plugin marketplace add https://github.com/bobsled-inc/compound-engineering-plugin
 ```
 
 Then install the plugin:
@@ -21,26 +21,10 @@ Then install the plugin:
 Use the [Claude Plugins CLI](https://claude-plugins.dev) to skip the marketplace setup:
 
 ```bash
-npx claude-plugins install @EveryInc/every-marketplace/compound-engineering
+npx claude-plugins install @bobsled-inc/compound-engineering-plugin/compound-engineering
 ```
 
 This automatically adds the marketplace and installs the plugin in a single step.
-
-### Factory (Droid) quick start
-
-1) Install Droid (Factory).
-
-```bash
-bunx droid-factory
-```
-
-What this does: copies Claude Code marketplace commands/agents/subagents and converts them to Droid format.
-
-Next:
-- Start Droid
-- In Settings, enable Sub-agents
-
-You're done: use this source from Droid. You don't need to add it in Claude Code anymore.
 
 ---
 
@@ -52,7 +36,7 @@ A Claude Code plugin that makes each unit of engineering work easier than the la
 
 **Each unit of engineering work should make subsequent units of work easier—not harder.**
 
-Traditional development accumulates technical debt. Every feature adds complexity. Every change increases maintenance burden. The codebase becomes harder to work with over time.
+Traditional development accumulates technical debt. Each feature adds complexity. Each change increases maintenance burden. The codebase becomes harder to work with over time.
 
 Compounding engineering inverts this. Each feature you build:
 - Documents patterns for the next feature
@@ -81,7 +65,7 @@ The plugin follows a three-step workflow that makes development compound:
 
 ### 1. Plan: Turn Ideas Into Structured Issues
 
-Use `/compound-engineering:plan` to transform feature descriptions into comprehensive GitHub issues.
+Use `/workflows:plan` to transform feature descriptions into comprehensive GitHub issues.
 
 **What it does:**
 - Researches your codebase to find similar patterns and conventions
@@ -93,7 +77,7 @@ Use `/compound-engineering:plan` to transform feature descriptions into comprehe
 
 ### 2. Work: Execute Plans Systematically
 
-Use `/compound-engineering:work` to execute work plans with isolated worktrees and systematic task tracking.
+Use `/workflows:work` to execute work plans with isolated worktrees and systematic task tracking.
 
 **What it does:**
 - Creates isolated git worktrees for clean development
@@ -105,11 +89,11 @@ Use `/compound-engineering:work` to execute work plans with isolated worktrees a
 
 ### 3. Review: Ensure Quality Before Merging
 
-Use `/compound-engineering:review` to perform exhaustive multi-agent code reviews.
+Use `/workflows:review` to perform exhaustive multi-agent code reviews.
 
 **What it does:**
 - Checks out your PR in an isolated worktree for deep analysis
-- Runs 12+ specialized review agents in parallel
+- Runs 10+ specialized review agents in parallel
 - Identifies security issues, performance problems, and architectural concerns
 - Creates trackable todos for every finding
 
@@ -121,7 +105,7 @@ Use `/compound-engineering:review` to perform exhaustive multi-agent code review
 
 ```bash
 # Create a detailed GitHub issue from a feature description
-claude /compound-engineering:plan "Add user profile avatars with S3 upload and automatic resizing"
+claude /workflows:plan "Add user profile avatars with S3 upload and automatic resizing"
 ```
 
 The command will:
@@ -139,7 +123,7 @@ You can choose detail levels:
 
 ```bash
 # Execute a plan document systematically
-claude /compound-engineering:work path/to/plan.md
+claude /workflows:work path/to/plan.md
 ```
 
 The command will:
@@ -153,19 +137,19 @@ The command will:
 
 ```bash
 # Review the latest PR
-claude /compound-engineering:review
+claude /workflows:review
 
 # Review a specific PR
-claude /compound-engineering:review 123
+claude /workflows:review 123
 
 # Review from a GitHub URL
-claude /compound-engineering:review https://github.com/user/repo/pull/123
+claude /workflows:review https://github.com/user/repo/pull/123
 ```
 
 The command will:
 1. Check out the PR in an isolated worktree
-2. Run 12+ specialized review agents in parallel:
-   - Language-specific reviewers (Rails, TypeScript, Python)
+2. Run 10+ specialized review agents in parallel:
+   - Language-specific reviewers (TypeScript, Python)
    - Security sentinel for vulnerability scanning
    - Performance oracle for optimization opportunities
    - Architecture strategist for design review
@@ -175,35 +159,33 @@ The command will:
 
 ## All Commands
 
-The plugin includes six commands for different stages of development:
+The plugin includes workflow commands for different stages of development:
 
-### `/compound-engineering:plan [feature description]`
+### `/workflows:plan [feature description]`
 Creates detailed GitHub issues from feature descriptions. Includes research, acceptance criteria, and implementation guidance.
 
-### `/compound-engineering:work [plan file]`
+### `/workflows:work [plan file]`
 Executes work plans systematically with worktrees, todos, and continuous validation.
 
-### `/compound-engineering:review [PR number or URL]`
+### `/workflows:review [PR number or URL]`
 Performs exhaustive multi-agent code reviews with security, performance, and architecture analysis.
 
-### `/compound-engineering:triage`
+### `/triage`
 Presents findings one by one for review and converts approved items into trackable todos.
 
-### `/compound-engineering:resolve_todo_parallel`
+### `/resolve_todo_parallel`
 Resolves multiple todos in parallel with systematic execution and quality checks.
 
-### `/compound-engineering:generate_command`
+### `/generate_command`
 Generates new Claude Code commands from descriptions.
 
 ## All Agents
 
-The plugin includes 17 specialized agents that provide expertise in different areas:
+The plugin includes 22 specialized agents that provide expertise in different areas:
 
 ### Code Review Specialists
-- **kieran-rails-reviewer:** Strict Rails code review with focus on conventions and simplicity
-- **kieran-typescript-reviewer:** TypeScript code review with type safety and best practices
-- **kieran-python-reviewer:** Python code review with focus on clarity and conventions
-- **dhh-rails-reviewer:** Rails review from DHH's philosophy of simplicity
+- **typescript-reviewer:** TypeScript code review with type safety and best practices
+- **python-reviewer:** Python code review with focus on clarity and conventions
 - **code-simplicity-reviewer:** Identifies opportunities to simplify complex code
 
 ### Quality Guardians
@@ -222,25 +204,24 @@ The plugin includes 17 specialized agents that provide expertise in different ar
 - **git-history-analyzer:** Analyzes git history for context and patterns
 
 ### Workflow & Communication
-- **every-style-editor:** Edits content to match Every's style guide
-- **feedback-codifier:** Converts feedback into actionable improvements
+- **bobsled-style-editor:** Edits content to match Bobsled's style guide
 - **pr-comment-resolver:** Systematically resolves PR review comments
 
 ## Why This Makes Development Compound
 
 Traditional development tools help you work faster. Compounding engineering tools make future work easier.
 
-**Every `/compound-engineering:plan` you create:**
+**Each `/workflows:plan` you create:**
 - Documents patterns that inform the next plan
 - Establishes conventions that reduce planning time
 - Builds institutional knowledge
 
-**Every `/compound-engineering:work` execution:**
+**Each `/workflows:work` execution:**
 - Creates reusable components
 - Refines your testing approach
 - Improves your development process
 
-**Every `/compound-engineering:review` you run:**
+**Each `/workflows:review` you run:**
 - Catches issues earlier
 - Documents learnings for the team
 - Raises the quality bar systematically
@@ -251,26 +232,22 @@ Over time, you're not just building features—you're building a development sys
 
 The plugin embodies these compounding engineering principles:
 
-**Prefer duplication over complexity:** Simple, clear code that's easy to understand beats complex abstractions. The kieran-rails-reviewer enforces this strictly.
+**Prefer duplication over complexity:** Simple, clear code that's easy to understand beats complex abstractions. The code-simplicity-reviewer enforces this strictly.
 
-**Document as you go:** Every command generates documentation—issues, todos, review findings—that makes future work easier.
+**Document as you go:** Each command generates documentation—issues, todos, review findings—that makes future work easier.
 
 **Quality compounds:** High-quality code is easier to modify. The multi-agent review system ensures every change meets your quality bar.
 
-**Systematic beats heroic:** Consistent processes beat individual heroics. The `/compound-engineering:work` command executes plans systematically, with continuous validation.
+**Systematic beats heroic:** Consistent processes beat individual heroics. The `/workflows:work` command executes plans systematically, with continuous validation.
 
 **Knowledge should be codified:** Learnings should be captured and reused. The research agents analyze your codebase to apply your own patterns back to you.
 
 ## Getting Started
 
 1. Install the plugin using one of the methods above
-2. Run `/compound-engineering:plan` on your next feature idea
-3. Use `/compound-engineering:work` to execute the plan
-4. Run `/compound-engineering:review` before merging
+2. Run `/workflows:plan` on your next feature idea
+3. Use `/workflows:work` to execute the plan
+4. Run `/workflows:review` before merging
 5. Repeat, and watch your development process compound
 
 Each cycle makes the next cycle easier. That's compounding engineering.
-
-## Learn More
-
-[Read the full story](https://every.to/source-code/my-ai-had-already-fixed-the-code-before-i-saw-it) about how compounding engineering transforms development workflows.

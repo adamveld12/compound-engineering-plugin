@@ -6,16 +6,16 @@ AI-powered development tools that get smarter with every use. Make each unit of 
 
 | Component | Count |
 |-----------|-------|
-| Agents | 25 |
+| Agents | 22 |
 | Commands | 17 |
-| Skills | 12 |
+| Skills | 8 |
 | MCP Servers | 2 |
 
 ## Agents
 
 Agents are organized into categories for easier discovery.
 
-### Review (12)
+### Review (9)
 
 | Agent | Description |
 |-------|-------------|
@@ -23,14 +23,11 @@ Agents are organized into categories for easier discovery.
 | `architecture-strategist` | Analyze architectural decisions and compliance |
 | `code-simplicity-reviewer` | Final pass for simplicity and minimalism |
 | `data-integrity-guardian` | Database migrations and data integrity |
-| `dhh-rails-reviewer` | Rails review from DHH's perspective |
-| `kieran-rails-reviewer` | Rails code review with strict conventions |
-| `kieran-python-reviewer` | Python code review with strict conventions |
-| `kieran-typescript-reviewer` | TypeScript code review with strict conventions |
 | `pattern-recognition-specialist` | Analyze code for patterns and anti-patterns |
 | `performance-oracle` | Performance analysis and optimization |
+| `python-reviewer` | Python code review with strict conventions |
 | `security-sentinel` | Security audits and vulnerability assessments |
-| `julik-frontend-races-reviewer` | Review JavaScript/Stimulus code for race conditions |
+| `typescript-reviewer` | TypeScript code review with strict conventions |
 
 ### Research (4)
 
@@ -49,21 +46,16 @@ Agents are organized into categories for easier discovery.
 | `design-iterator` | Iteratively refine UI through systematic design iterations |
 | `figma-design-sync` | Synchronize web implementations with Figma designs |
 
-### Workflow (5)
+### Workflow (6)
 
 | Agent | Description |
 |-------|-------------|
+| `bobsled-style-editor` | Edit content to conform to Bobsled's style guide |
 | `bug-reproduction-validator` | Systematically reproduce and validate bug reports |
-| `every-style-editor` | Edit content to conform to Every's style guide |
-| `lint` | Run linting and code quality checks on Ruby and ERB files |
+| `git-god` | Advanced git operations and history management |
 | `pr-comment-resolver` | Address PR comments and implement fixes |
 | `spec-flow-analyzer` | Analyze user flows and identify gaps in specifications |
-
-### Docs (1)
-
-| Agent | Description |
-|-------|-------------|
-| `ankane-readme-writer` | Create READMEs following Ankane-style template for Ruby gems |
+| `typescript-coder` | TypeScript development with Bobsled patterns |
 
 ## Commands
 
@@ -96,39 +88,20 @@ Core workflow commands use `workflows:` prefix to avoid collisions with built-in
 
 ## Skills
 
-### Architecture & Design
-
 | Skill | Description |
 |-------|-------------|
 | `agent-native-architecture` | Build AI agents using prompt-native architecture |
-
-### Development Tools
-
-| Skill | Description |
-|-------|-------------|
-| `andrew-kane-gem-writer` | Write Ruby gems following Andrew Kane's patterns |
-| `compound-docs` | Capture solved problems as categorized documentation |
+| `bobsled-style-editor` | Review copy for Bobsled's style guide compliance |
 | `create-agent-skills` | Expert guidance for creating Claude Code skills |
-| `dhh-ruby-style` | Write Ruby/Rails code in DHH's 37signals style |
-| `dspy-ruby` | Build type-safe LLM applications with DSPy.rb |
+| `file-todos` | File-based todo tracking system |
 | `frontend-design` | Create production-grade frontend interfaces |
+| `gemini-imagegen` | Generate and edit images using Google's Gemini API |
+| `git-worktree` | Manage Git worktrees for parallel development |
 | `skill-creator` | Guide for creating effective Claude Code skills |
 
-### Content & Workflow
+### gemini-imagegen
 
-| Skill | Description |
-|-------|-------------|
-| `every-style-editor` | Review copy for Every's style guide compliance |
-| `file-todos` | File-based todo tracking system |
-| `git-worktree` | Manage Git worktrees for parallel development |
-
-### Image Generation
-
-| Skill | Description |
-|-------|-------------|
-| `gemini-imagegen` | Generate and edit images using Google's Gemini API |
-
-**gemini-imagegen features:**
+**Features:**
 - Text-to-image generation
 - Image editing and manipulation
 - Multi-turn refinement
@@ -161,7 +134,7 @@ Core workflow commands use `workflows:` prefix to avoid collisions with built-in
 - `resolve-library-id` - Find library ID for a framework/package
 - `get-library-docs` - Get documentation for a specific library
 
-Supports 100+ frameworks including Rails, React, Next.js, Vue, Django, Laravel, and more.
+Supports 100+ frameworks including React, Next.js, Vue, Django, Laravel, and more.
 
 MCP servers start automatically when the plugin is enabled.
 

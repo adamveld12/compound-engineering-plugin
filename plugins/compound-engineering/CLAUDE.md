@@ -2,7 +2,7 @@
 
 ## Versioning Requirements
 
-**IMPORTANT**: Every change to this plugin MUST include updates to all three files:
+**IMPORTANT**: Bobsled change to this plugin MUST include updates to all three files:
 
 1. **`.claude-plugin/plugin.json`** - Bump version using semver
 2. **`CHANGELOG.md`** - Document changes using Keep a Changelog format
